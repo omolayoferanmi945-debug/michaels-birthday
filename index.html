@@ -1,0 +1,170 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Michael's Birthday 💖</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #ff4d6d, #3a0ca3);
+      color: #fff;
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+    }.container {
+  padding: 20px;
+  max-width: 900px;
+  margin: auto;
+  text-align: center;
+}
+
+h1 {
+  font-size: 2.8em;
+  animation: float 2s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%,100%{transform:translateY(0)}
+  50%{transform:translateY(-10px)}
+}
+
+.card {
+  background: rgba(255,255,255,0.1);
+  padding: 20px;
+  border-radius: 20px;
+  margin: 20px 0;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+ul {
+  text-align: left;
+  line-height: 1.8;
+}
+
+.playlist a {
+  display: block;
+  margin: 10px 0;
+  color: #ffe0f0;
+  font-weight: bold;
+}
+
+.heart {
+  position: fixed;
+  top: -10px;
+  font-size: 20px;
+  animation: fall linear infinite;
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(100vh);
+  }
+}
+
+button {
+  background: #ff85a2;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 20px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+  </style>
+</head>
+<body><div class="container">
+  <h1>🎉 Happy Birthday My Sweet Boy 🎉</h1>  <div class="card">
+    <p>
+      Hiiii my love 🥹💖<br><br>
+      You're finally an adult!!! 🎊<br><br>
+      Distance is annoying as hell 😒 but somehow... you still make my days brighter.
+      Your voice, your laugh, your check-ins... everything about you just hits different.
+    </p><button onclick="hug()">Click for a hug 🤗</button>
+<p id="hugText"></p>
+
+  </div>  <div class="card">
+    <h2>💖 50 Things I Love About You</h2>
+    <ul>
+      <li>1. Your voice</li>
+      <li>2. Your laugh</li>
+      <li>3. Your patience</li>
+      <li>4. Your beards 😌</li>
+      <li>5. Your silent support</li>
+      <li>6. Your strength</li>
+      <li>7. Your understanding</li>
+      <li>8. Your kindness</li>
+      <li>9. Your care</li>
+      <li>10. Your resilience</li>
+      <li>11. Your energy</li>
+      <li>12. Your positivity</li>
+      <li>13. Your personality</li>
+      <li>14. Your face 😍</li>
+      <li>15. The way you look at me</li>
+      <li>16. Your humour</li>
+      <li>17. The way you speak Yoruba 😩🔥</li>
+      <li>18. Every moment you give me</li>
+      <li>19. Your passion</li>
+      <li>20. The way you light up my mood</li>
+      <li>21. The way you flirt</li>
+      <li>22. Your inner child</li>
+      <li>23. The way you make me feel like high school love</li>
+      <li>24. Your actions of love</li>
+      <li>25. Your music & art</li>
+      <li>26. Your taste in music</li>
+      <li>27. The way you feel like a love song</li>
+      <li>28. The way you listen to me</li>
+      <li>29. The way we met</li>
+      <li>30. You're an amazing teacher</li>
+      <li>31. Our calls</li>
+      <li>32. Your nicknames for me</li>
+      <li>33. Your manners</li>
+      <li>34. The way you sing for me</li>
+      <li>35. Your smile</li>
+      <li>36. The way you calm my drama 😭</li>
+      <li>37. Your voice of reason</li>
+      <li>38. Your authenticity</li>
+      <li>39. Your loyalty</li>
+      <li>40. You're a real friend</li>
+      <li>41. Your faith</li>
+      <li>42. Your trust in God</li>
+      <li>43. Your care for people</li>
+      <li>44. You care about my friends</li>
+      <li>45. Your long voice notes</li>
+      <li>46. Your midday check-ins 💕</li>
+      <li>47. You let me be myself</li>
+      <li>48. Your pink lips 😌</li>
+      <li>49. Your different sides 😭</li>
+      <li>50. You. Just you ❤️</li>
+    </ul>
+  </div>  <div class="card playlist">
+    <h2>🎶 Songs That Feel Like Us</h2>
+    <a href="https://open.spotify.com/playlist/18Kb7dQwWOoMGZHaSpnmnZ">Playlist 1 💕</a>
+    <a href="https://open.spotify.com/playlist/6qSQe20OZpS8ct9g6CTTYv">Playlist 2 💋</a>
+    <a href="https://open.spotify.com/playlist/3rYVrFulNjnhPsbnW5CrzF">Playlist 3 🥹</a>
+    <a href="https://open.spotify.com/playlist/1VsoZlrk1h5vECxgQQV4iW">Playlist 4 😌</a>
+    <a href="https://open.spotify.com/playlist/66hNaiubXfWzGV253pQDkg">Playlist 5 🎧</a>
+  </div>  <div class="card">
+    <p>Couldn't bake a cake 🎂 so I baked you this instead 💋</p>
+  </div></div><script>
+function hug(){
+  document.getElementById("hugText").innerText = "Squeezing you tight right now 🤗💖 don't let go!";
+}
+
+// floating hearts
+setInterval(() => {
+  const heart = document.createElement("div");
+  heart.classList.add("heart");
+  heart.innerText = "💖";
+  heart.style.left = Math.random() * 100 + "vw";
+  heart.style.animationDuration = (Math.random() * 3 + 2) + "s";
+  document.body.appendChild(heart);
+
+  setTimeout(() => {
+    heart.remove();
+  }, 5000);
+}, 300);
+</script></body>
+  </html>
