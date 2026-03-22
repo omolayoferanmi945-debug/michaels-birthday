@@ -1,4 +1,5 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,81 +12,109 @@
       margin: 0;
       padding: 0;
       overflow-x: hidden;
-    }.container {
-  padding: 20px;
-  max-width: 900px;
-  margin: auto;
-  text-align: center;
-}
-
-h1 {
-  font-size: 2.8em;
-  animation: float 2s ease-in-out infinite;
-}
-
-@keyframes float {
-  0%,100%{transform:translateY(0)}
-  50%{transform:translateY(-10px)}
-}
-
-.card {
-  background: rgba(255,255,255,0.1);
-  padding: 20px;
-  border-radius: 20px;
-  margin: 20px 0;
-  backdrop-filter: blur(10px);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-}
-
-ul {
-  text-align: left;
-  line-height: 1.8;
-}
-
-.playlist a {
-  display: block;
-  margin: 10px 0;
-  color: #ffe0f0;
-  font-weight: bold;
-}
-
-.heart {
-  position: fixed;
-  top: -10px;
-  font-size: 20px;
-  animation: fall linear infinite;
-}
-
-@keyframes fall {
-  to {
-    transform: translateY(100vh);
-  }
-}
-
-button {
-  background: #ff85a2;
-  border: none;
-  padding: 12px 20px;
-  border-radius: 20px;
-  color: white;
-  font-size: 16px;
-  cursor: pointer;
-  margin-top: 10px;
-}
-
+    }
+    .container {
+      padding: 20px;
+      max-width: 900px;
+      margin: auto;
+      text-align: center;
+    }
+    h1 {
+      font-size: 2.8em;
+      animation: float 2s ease-in-out infinite;
+    }
+    @keyframes float {
+      0%,100%{transform:translateY(0);}
+      50%{transform:translateY(-10px);}
+    }
+    .card {
+      background: rgba(255,255,255,0.1);
+      padding: 20px;
+      border-radius: 20px;
+      margin: 20px 0;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    }
+    ul {
+      text-align: left;
+      line-height: 1.8;
+    }
+    img, video {
+      width: 100%;
+      border-radius: 15px;
+      margin-top: 10px;
+    }
+    .playlist a {
+      display: block;
+      margin: 10px 0;
+      color: #ffe0f0;
+      font-weight: bold;
+    }
+    .heart {
+      position: fixed;
+      top: -10px;
+      font-size: 20px;
+      animation: fall linear infinite;
+    }
+    @keyframes fall {
+      to { transform: translateY(100vh); }
+    }
+    button {
+      background: #ff85a2;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 20px;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+    #letter {
+      font-size: 18px;
+      white-space: pre-line;
+      min-height: 120px;
+      text-align: left;
+    }
   </style>
 </head>
-<body><div class="container">
-  <h1>🎉 Happy Birthday My Sweet Boy 🎉</h1>  <div class="card">
-    <p>
-      Hiiii my love 🥹💖<br><br>
-      You're finally an adult!!! 🎊<br><br>
-      Distance is annoying as hell 😒 but somehow... you still make my days brighter.
-      Your voice, your laugh, your check-ins... everything about you just hits different.
-    </p><button onclick="hug()">Click for a hug 🤗</button>
-<p id="hugText"></p>
+<body>
 
-  </div>  <div class="card">
+<div class="container">
+  <h1>🎉 Happy Birthday My Sweet Boy 🎉</h1>
+
+  <!-- 💌 Typing Love Letter -->
+  <div class="card">
+    <h2>💌 A Letter For You</h2>
+    <p id="letter"></p>
+  </div>
+
+  <!-- 🤗 Hug Button -->
+  <div class="card">
+    <button onclick="hug()">Click for a hug 🤗</button>
+    <p id="hugText"></p>
+  </div>
+
+  <!-- 📸 Photo Section -->
+  <div class="card">
+    <h2>📸 Us</h2>
+    <!-- Replace with your uploaded image(s) -->
+    <img src="photo1.jpg" alt="us">
+    <!-- Add more photos if you want -->
+    <!-- <img src="photo2.jpg" alt="us"> -->
+  </div>
+
+  <!-- 🎤 Singing Video Section -->
+  <div class="card">
+    <h2>🎤 A Little Something From Me</h2>
+    <video controls>
+      <source src="singing.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <p>Hope you enjoy this little song 💖</p>
+  </div>
+
+  <!-- 💖 50 Things I Love About You -->
+  <div class="card">
     <h2>💖 50 Things I Love About You</h2>
     <ul>
       <li>1. Your voice</li>
@@ -139,32 +168,53 @@ button {
       <li>49. Your different sides 😭</li>
       <li>50. You. Just you ❤️</li>
     </ul>
-  </div>  <div class="card playlist">
+  </div>
+
+  <!-- 🎶 Spotify Playlists -->
+  <div class="card">
     <h2>🎶 Songs That Feel Like Us</h2>
     <a href="https://open.spotify.com/playlist/18Kb7dQwWOoMGZHaSpnmnZ">Playlist 1 💕</a>
     <a href="https://open.spotify.com/playlist/6qSQe20OZpS8ct9g6CTTYv">Playlist 2 💋</a>
     <a href="https://open.spotify.com/playlist/3rYVrFulNjnhPsbnW5CrzF">Playlist 3 🥹</a>
     <a href="https://open.spotify.com/playlist/1VsoZlrk1h5vECxgQQV4iW">Playlist 4 😌</a>
     <a href="https://open.spotify.com/playlist/66hNaiubXfWzGV253pQDkg">Playlist 5 🎧</a>
-  </div>  <div class="card">
+  </div>
+
+  <div class="card">
     <p>Couldn't bake a cake 🎂 so I baked you this instead 💋</p>
-  </div></div><script>
-function hug(){
-  document.getElementById("hugText").innerText = "Squeezing you tight right now 🤗💖 don't let go!";
-}
+  </div>
 
-// floating hearts
-setInterval(() => {
-  const heart = document.createElement("div");
-  heart.classList.add("heart");
-  heart.innerText = "💖";
-  heart.style.left = Math.random() * 100 + "vw";
-  heart.style.animationDuration = (Math.random() * 3 + 2) + "s";
-  document.body.appendChild(heart);
+</div>
 
-  setTimeout(() => {
-    heart.remove();
-  }, 5000);
-}, 300);
-</script></body>
-  </html>
+<script>
+  // Typing letter effect
+  const text = `Hiiii my love 🥹💖\n\nYou're finally an adult!!! 🎊\nEven from miles away, you still make my world feel close.\nI miss you. I adore you. Hope this makes you smile the way you make me smile every single day 💕`;
+  let i = 0;
+  function typeWriter() {
+    if (i < text.length) {
+      document.getElementById("letter").innerHTML += text.charAt(i);
+      i++;
+      setTimeout(typeWriter, 30);
+    }
+  }
+  typeWriter();
+
+  // Hug button
+  function hug() {
+    document.getElementById("hugText").innerText = "Squeezing you tight right now 🤗💖 don't let go!";
+  }
+
+  // Floating hearts
+  setInterval(() => {
+    const heart = document.createElement("div");
+    heart.classList.add("heart");
+    heart.innerText = "💖";
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.animationDuration = (Math.random() * 3 + 2) + "s";
+    document.body.appendChild(heart);
+    setTimeout(() => { heart.remove(); }, 5000);
+  }, 300);
+</script>
+
+</body>
+  </himagee
