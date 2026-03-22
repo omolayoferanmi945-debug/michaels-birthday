@@ -13,20 +13,25 @@
       padding: 0;
       overflow-x: hidden;
     }
+
     .container {
       padding: 20px;
       max-width: 900px;
       margin: auto;
       text-align: center;
     }
+
     h1 {
       font-size: 2.8em;
       animation: float 2s ease-in-out infinite;
+      margin-bottom: 20px;
     }
+
     @keyframes float {
-      0%,100%{transform:translateY(0);}
-      50%{transform:translateY(-10px);}
+      0%,100%{transform:translateY(0)}
+      50%{transform:translateY(-10px)}
     }
+
     .card {
       background: rgba(255,255,255,0.1);
       padding: 20px;
@@ -35,30 +40,45 @@
       backdrop-filter: blur(10px);
       box-shadow: 0 10px 25px rgba(0,0,0,0.2);
     }
-    ul {
-      text-align: left;
-      line-height: 1.8;
+
+    .photo-container img {
+      width: 100%;
+      max-width: 400px;
+      border-radius: 15px;
+      margin: 10px;
+      display: inline-block;
     }
-    img, video {
+
+    video {
       width: 100%;
       border-radius: 15px;
       margin-top: 10px;
     }
-    .playlist a {
-      display: block;
-      margin: 10px 0;
-      color: #ffe0f0;
-      font-weight: bold;
+
+    ul {
+      text-align: left;
+      line-height: 1.8;
     }
+
+    .playlist iframe {
+      width: 100%;
+      height: 80px;
+      margin: 10px 0;
+      border-radius: 12px;
+    }
+
     .heart {
       position: fixed;
       top: -10px;
       font-size: 20px;
       animation: fall linear infinite;
+      z-index: 9999;
     }
+
     @keyframes fall {
       to { transform: translateY(100vh); }
     }
+
     button {
       background: #ff85a2;
       border: none;
@@ -69,12 +89,24 @@
       cursor: pointer;
       margin-top: 10px;
     }
+
     #letter {
       font-size: 18px;
       white-space: pre-line;
       min-height: 120px;
-      text-align: left;
     }
+
+    /* Optional fade-in for 50 things */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUp 0.5s forwards;
+    }
+
+    @keyframes fadeInUp {
+      to { opacity: 1; transform: translateY(0); }
+    }
+
   </style>
 </head>
 <body>
@@ -82,7 +114,7 @@
 <div class="container">
   <h1>🎉 Happy Birthday My Sweet Boy 🎉</h1>
 
-  <!-- 💌 Typing Love Letter -->
+  <!-- 💌 Love Letter -->
   <div class="card">
     <h2>💌 A Letter For You</h2>
     <p id="letter"></p>
@@ -95,89 +127,85 @@
   </div>
 
   <!-- 📸 Photo Section -->
-  <div class="card">
-    <h2>📸 Us</h2>
-    <!-- Replace with your uploaded image(s) -->
-    <img src="photo1.jpg" alt="us">
-    <!-- Add more photos if you want -->
-    <!-- <img src="photo2.jpg" alt="us"> -->
+  <div class="card photo-container">
+    <h2>📸 Our Moments</h2>
+    <img src="https://raw.githubusercontent.com/omolayoferanmi945-debug/michaels-birthday/refs/heads/main/IMG-20260322-WA0086.jpg" alt="us photo 1">
+    <img src="https://raw.githubusercontent.com/omolayoferanmi945-debug/michaels-birthday/refs/heads/main/IMG-20260322-WA0087.jpg" alt="us photo 2">
   </div>
 
-  <!-- 🎤 Singing Video Section -->
+  <!-- 🎤 Singing Video -->
   <div class="card">
     <h2>🎤 A Little Something From Me</h2>
     <video controls>
-      <source src="singing.mp4" type="video/mp4">
-      Your browser does not support the video tag.
+      <source src="https://raw.githubusercontent.com/omolayoferanmi945-debug/michaels-birthday/main/VID-20260322-WA0090.mp4" type="video/mp4">
     </video>
-    <p>Hope you enjoy this little song 💖</p>
   </div>
 
-  <!-- 💖 50 Things I Love About You -->
+  <!-- 💖 50 Things -->
   <div class="card">
     <h2>💖 50 Things I Love About You</h2>
     <ul>
-      <li>1. Your voice</li>
-      <li>2. Your laugh</li>
-      <li>3. Your patience</li>
-      <li>4. Your beards 😌</li>
-      <li>5. Your silent support</li>
-      <li>6. Your strength</li>
-      <li>7. Your understanding</li>
-      <li>8. Your kindness</li>
-      <li>9. Your care</li>
-      <li>10. Your resilience</li>
-      <li>11. Your energy</li>
-      <li>12. Your positivity</li>
-      <li>13. Your personality</li>
-      <li>14. Your face 😍</li>
-      <li>15. The way you look at me</li>
-      <li>16. Your humour</li>
-      <li>17. The way you speak Yoruba 😩🔥</li>
-      <li>18. Every moment you give me</li>
-      <li>19. Your passion</li>
-      <li>20. The way you light up my mood</li>
-      <li>21. The way you flirt</li>
-      <li>22. Your inner child</li>
-      <li>23. The way you make me feel like high school love</li>
-      <li>24. Your actions of love</li>
-      <li>25. Your music & art</li>
-      <li>26. Your taste in music</li>
-      <li>27. The way you feel like a love song</li>
-      <li>28. The way you listen to me</li>
-      <li>29. The way we met</li>
-      <li>30. You're an amazing teacher</li>
-      <li>31. Our calls</li>
-      <li>32. Your nicknames for me</li>
-      <li>33. Your manners</li>
-      <li>34. The way you sing for me</li>
-      <li>35. Your smile</li>
-      <li>36. The way you calm my drama 😭</li>
-      <li>37. Your voice of reason</li>
-      <li>38. Your authenticity</li>
-      <li>39. Your loyalty</li>
-      <li>40. You're a real friend</li>
-      <li>41. Your faith</li>
-      <li>42. Your trust in God</li>
-      <li>43. Your care for people</li>
-      <li>44. You care about my friends</li>
-      <li>45. Your long voice notes</li>
-      <li>46. Your midday check-ins 💕</li>
-      <li>47. You let me be myself</li>
-      <li>48. Your pink lips 😌</li>
-      <li>49. Your different sides 😭</li>
-      <li>50. You. Just you ❤️</li>
+      <li class="fade-in">1. Your voice</li>
+      <li class="fade-in">2. Your laugh</li>
+      <li class="fade-in">3. Your patience</li>
+      <li class="fade-in">4. Your beards 😌</li>
+      <li class="fade-in">5. Your silent support</li>
+      <li class="fade-in">6. Your strength</li>
+      <li class="fade-in">7. Your understanding</li>
+      <li class="fade-in">8. Your kindness</li>
+      <li class="fade-in">9. Your care</li>
+      <li class="fade-in">10. Your resilience</li>
+      <li class="fade-in">11. Your energy</li>
+      <li class="fade-in">12. Your positivity</li>
+      <li class="fade-in">13. Your personality</li>
+      <li class="fade-in">14. Your face 😍</li>
+      <li class="fade-in">15. The way you look at me</li>
+      <li class="fade-in">16. Your humour</li>
+      <li class="fade-in">17. The way you speak Yoruba 😩🔥</li>
+      <li class="fade-in">18. Every moment you give me</li>
+      <li class="fade-in">19. Your passion</li>
+      <li class="fade-in">20. The way you light up my mood</li>
+      <li class="fade-in">21. The way you flirt</li>
+      <li class="fade-in">22. Your inner child</li>
+      <li class="fade-in">23. The way you make me feel like high school love</li>
+      <li class="fade-in">24. Your actions of love</li>
+      <li class="fade-in">25. Your music & art</li>
+      <li class="fade-in">26. Your taste in music</li>
+      <li class="fade-in">27. The way you feel like a love song</li>
+      <li class="fade-in">28. The way you listen to me</li>
+      <li class="fade-in">29. The way we met</li>
+      <li class="fade-in">30. You're an amazing teacher</li>
+      <li class="fade-in">31. Our calls</li>
+      <li class="fade-in">32. Your nicknames for me</li>
+      <li class="fade-in">33. Your manners</li>
+      <li class="fade-in">34. The way you sing for me</li>
+      <li class="fade-in">35. Your smile</li>
+      <li class="fade-in">36. The way you calm my drama 😭</li>
+      <li class="fade-in">37. Your voice of reason</li>
+      <li class="fade-in">38. Your authenticity</li>
+      <li class="fade-in">39. Your loyalty</li>
+      <li class="fade-in">40. You're a real friend</li>
+      <li class="fade-in">41. Your faith</li>
+      <li class="fade-in">42. Your trust in God</li>
+      <li class="fade-in">43. Your care for people</li>
+      <li class="fade-in">44. You care about my friends</li>
+      <li class="fade-in">45. Your long voice notes</li>
+      <li class="fade-in">46. Your midday check-ins 💕</li>
+      <li class="fade-in">47. You let me be myself</li>
+      <li class="fade-in">48. Your pink lips 😌</li>
+      <li class="fade-in">49. Your different sides 😭</li>
+      <li class="fade-in">50. You. Just you ❤️</li>
     </ul>
   </div>
 
-  <!-- 🎶 Spotify Playlists -->
-  <div class="card">
+  <!-- 🎶 Spotify -->
+  <div class="card playlist">
     <h2>🎶 Songs That Feel Like Us</h2>
-    <a href="https://open.spotify.com/playlist/18Kb7dQwWOoMGZHaSpnmnZ">Playlist 1 💕</a>
-    <a href="https://open.spotify.com/playlist/6qSQe20OZpS8ct9g6CTTYv">Playlist 2 💋</a>
-    <a href="https://open.spotify.com/playlist/3rYVrFulNjnhPsbnW5CrzF">Playlist 3 🥹</a>
-    <a href="https://open.spotify.com/playlist/1VsoZlrk1h5vECxgQQV4iW">Playlist 4 😌</a>
-    <a href="https://open.spotify.com/playlist/66hNaiubXfWzGV253pQDkg">Playlist 5 🎧</a>
+    <iframe src="https://open.spotify.com/embed/playlist/18Kb7dQwWOoMGZHaSpnmnZ" allow="encrypted-media"></iframe>
+    <iframe src="https://open.spotify.com/embed/playlist/6qSQe20OZpS8ct9g6CTTYv" allow="encrypted-media"></iframe>
+    <iframe src="https://open.spotify.com/embed/playlist/3rYVrFulNjnhPsbnW5CrzF" allow="encrypted-media"></iframe>
+    <iframe src="https://open.spotify.com/embed/playlist/1VsoZlrk1h5vECxgQQV4iW" allow="encrypted-media"></iframe>
+    <iframe src="https://open.spotify.com/embed/playlist/66hNaiubXfWzGV253pQDkg" allow="encrypted-media"></iframe>
   </div>
 
   <div class="card">
@@ -187,8 +215,8 @@
 </div>
 
 <script>
-  // Typing letter effect
-  const text = `Hiiii my love 🥹💖\n\nYou're finally an adult!!! 🎊\nEven from miles away, you still make my world feel close.\nI miss you. I adore you. Hope this makes you smile the way you make me smile every single day 💕`;
+  // Typing letter
+  const text = `Hiiii my love 🥹💖\n\nYou're finally an adult!!! 🎊\nDistance is annoying as hell 😒 but somehow you still make my days brighter.\nYour voice, your laugh, your check-ins... everything about you just hits different. I adore you so much 💕`;
   let i = 0;
   function typeWriter() {
     if (i < text.length) {
@@ -212,9 +240,9 @@
     heart.style.left = Math.random() * 100 + "vw";
     heart.style.animationDuration = (Math.random() * 3 + 2) + "s";
     document.body.appendChild(heart);
-    setTimeout(() => { heart.remove(); }, 5000);
+    setTimeout(() => heart.remove(), 5000);
   }, 300);
 </script>
 
 </body>
-  </himagee
+  </html>
